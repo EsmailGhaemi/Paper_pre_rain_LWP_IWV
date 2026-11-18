@@ -1,0 +1,26 @@
+# Conda environment used for the notebooks (tested with these versions).
+#   conda env create -f environment.yml
+#   conda activate lwp_iwv_before_rain
+name: lwp_iwv_before_rain
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy=2.4
+  - pandas=3.0
+  - xarray=2026.4
+  - dask=2026.3
+  - netcdf4=1.7
+  - h5netcdf=1.8
+  - scipy=1.17
+  - matplotlib=3.10
+  - seaborn=0.13
+  - pillow=12.2
+  - wradlib=2.4          # radar gridding (notebook 02)
+  - gdal=3.12            # used by wradlib for the projection
+  - pyproj=3.7
+  - proj=9.8
+  - poppler              # pdftoppm: flowcharts PDF -> PNG (f02, f03)
+  - ipykernel
+  - jupyterlab
+  - nbconvert

@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below and cite the paper."
+title: "LWP_IWV_before_rain: code for 'Regime-dependent evolution of water vapor, cloud liquid, and cloud base before rain onset in the southeastern Alpine forelands'"
+type: software
+authors:
+  - family-names: Ghaemi
+    given-names: Esmail
+    affiliation: "Institute of Physics (AGP) and Wegener Center for Climate and Global Change, University of Graz, Austria"
+version: 1.0.0
+date-released: "2026-11-18"
+license: MIT
+keywords:
+  - liquid water path
+  - integrated water vapour
+  - microwave radiometer
+  - X-band polarimetric radar
+  - convective precipitation
+  - WegenerNet
+references:
+  - type: article
+    title: "Regime-dependent evolution of water vapor, cloud liquid, and cloud base before rain onset in the southeastern Alpine forelands"
+    authors:
+      - family-names: Ghaemi
+        given-names: Esmail
+      - family-names: Kvas
+        given-names: Andreas
+      - family-names: Foelsche
+        given-names: Ulrich
+      - family-names: Kollias
+        given-names: Pavlos
+    journal: "Atmospheric Chemistry and Physics (submitted)"

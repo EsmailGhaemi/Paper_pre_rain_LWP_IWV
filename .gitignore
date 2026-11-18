@@ -1,0 +1,16 @@
+# raw WegenerNet data and large derived files (see data/README.md)
+data/raw/*
+!data/raw/.gitkeep
+data/derived/*
+!data/derived/.gitkeep
+
+# single figure panels (made by the notebooks)
+figures/panels/
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
+.idea/
