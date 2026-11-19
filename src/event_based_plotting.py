@@ -20,6 +20,7 @@ import numpy as np
 from matplotlib import colormaps
 from matplotlib.colors import ListedColormap
 from matplotlib.legend_handler import HandlerPathCollection
+from figure_style import style_fonts
 from event_based_functions import (
     calculate_minus5_isotherm_height,
 )
@@ -261,7 +262,7 @@ def plot_radar_var_with_overlay(
     cbar_kw = {
         "orientation": "horizontal",
         "aspect": 40,
-        "pad": 0.17,
+        "pad": 0.25,                   # room for the rotated time labels and "Time (UTC)"
         "label": cbar_label or var_name,
     }
     if cbar_kwargs_extra:
@@ -333,7 +334,7 @@ def plot_radar_var_with_overlay(
     if title:
         ax1.set_title(title)
 
-    plt.tight_layout()
+    style_fonts(fig, tight=True)     # common font family and sizes (figure_style.py)
 
     if savefig_name:
         filepath = os.path.join(FIGURE_DIR, savefig_name)
@@ -416,7 +417,7 @@ def plot_precip_height_time(
         cbar_kwargs={
             "orientation": "horizontal",
             "aspect": 40,
-            "pad": 0.17,
+            "pad": 0.25,                   # room for the rotated time labels and "Time (UTC)"
             "label": cbar_label,
         },
         alpha=0.9,
@@ -457,7 +458,7 @@ def plot_precip_height_time(
     if title:
         ax1.set_title(title)
 
-    plt.tight_layout()
+    style_fonts(fig, tight=True)     # common font family and sizes (figure_style.py)
 
     if savefig_name:
         filepath = os.path.join(FIGURE_DIR, savefig_name)

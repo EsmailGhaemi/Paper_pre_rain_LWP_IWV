@@ -20,6 +20,7 @@ P95 over the event) is recomputed, and the number of convective events is counte
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from figure_style import style_fonts
 
 #                 reflectivity  ZDR column   KDP        spectrum width
 WEIGHT_SETS = [
@@ -139,5 +140,5 @@ def plot_sensitivity(results, thresholds):
     axes[1].grid(alpha=0.25, linewidth=0.6)
     axes[1].spines[["top", "right"]].set_visible(False)
 
-    plt.tight_layout()
+    style_fonts(fig, tight=True)     # common font family and sizes (figure_style.py)
     return fig, axes

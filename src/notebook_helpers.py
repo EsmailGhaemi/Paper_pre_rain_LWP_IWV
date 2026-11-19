@@ -21,6 +21,7 @@ import xarray as xr
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
 from matplotlib.ticker import PercentFormatter, ScalarFormatter
+from figure_style import style_fonts
 from plot_functions import (
     _corr,
     _pstars,
@@ -297,6 +298,7 @@ def plot_combined_lwp_iwv_summary(pre_warm_by_cloud, fig_dir):
     axes[1, 0].set_ylabel("Delta IWV (kg$~$m$^{-2}$)")
     fig.suptitle("")
 
+    style_fonts(fig)                 # common font family and sizes (figure_style.py)
     savefig = f"{fig_dir}/lwp_iwv_scatter_trajectory_10km.png"
     fig.savefig(savefig, dpi=300, bbox_inches="tight")
     print(f"Saved to {savefig}")

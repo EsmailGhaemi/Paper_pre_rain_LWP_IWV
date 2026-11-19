@@ -20,6 +20,7 @@ import xarray as xr
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
 from scipy import stats as sp_stats
+from figure_style import style_fonts
 
 try:
     from scipy.stats import pearsonr
@@ -547,6 +548,7 @@ def plot_warm_regime_cloud_grid(
     if suptitle:
         fig.suptitle(suptitle, fontsize=16, fontweight="bold")
 
+    style_fonts(fig)                 # common font family and sizes (figure_style.py)
     if savefig:
         fig.savefig(savefig, dpi=300, bbox_inches="tight")
         print(f"Saved to {savefig}")
@@ -808,6 +810,7 @@ def plot_warm_regime_cloud_grid_multivar(
             fontweight="bold",
         )
 
+    style_fonts(fig)                 # common font family and sizes (figure_style.py)
     if savefig:
         fig.savefig(savefig, dpi=300, bbox_inches="tight")
         print(f"Saved to {savefig}")
@@ -1114,6 +1117,7 @@ def plot_cold_events_panel(
             fontweight="bold",
         )
 
+    style_fonts(fig)                 # common font family and sizes (figure_style.py)
     if savefig:
         fig.savefig(savefig, dpi=300, bbox_inches="tight")
         print(f"Saved to {savefig}")
@@ -1637,6 +1641,7 @@ def plot_lwp_iwv_anomaly_scatter(
         _draw_panel(ax, regime_filter=None, panel_title=base_title)
         ax_out = ax
 
+    style_fonts(fig)                 # common font family and sizes (figure_style.py)
     if savefig:
         fig.savefig(savefig, dpi=300, bbox_inches="tight")
         print(f"Saved to {savefig}")
@@ -2158,6 +2163,7 @@ def plot_lwp_iwv_trajectory(
         )
     fig.suptitle(suptitle, fontweight="bold")
 
+    style_fonts(fig)                 # common font family and sizes (figure_style.py)
     if savefig:
         fig.savefig(savefig, dpi=300, bbox_inches="tight")
         print(f"Saved to {savefig}")

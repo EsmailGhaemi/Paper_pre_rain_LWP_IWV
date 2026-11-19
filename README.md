@@ -71,6 +71,7 @@ Run times on the test machine (a server with 252 GB of memory): notebook 01 abou
 * **Fig. A1** in the manuscript uses criterion scores computed without quality control and with a 600 m melting layer (`data/derived/convective_components_202606/`).
 * **Radar quality flag.** The gridding masks gates with the quality variables `ste_prob`, `rad_qcs_flag`, `qcs_flag` or `quality_flag`; the L1b files carry `radar_qcs_flag`, so no gate is removed before gridding (as for the gridded files used in the paper).
 * `plot_lwp_boxen` / `plot_iwv_boxen` (`src/notebook_helpers.py`) call `seaborn.set_theme()`, which changes the matplotlib style of later figures; notebook 01 restores it after f05.
+* Fonts: all figures use DejaVu Sans with the sizes in `src/figure_style.py` (tick labels 13 pt, axis labels 14 pt, panel titles 15 pt bold, legends and annotations 12 pt). `style_fonts(fig)` applies them to every figure just before it is saved, so all panels of a composite figure have the same letter size.
 * GDAL/PROJ: notebook 02 sets `PROJ_DATA` to the PROJ database of the active Python environment before importing wradlib.
 
 ## Licence and citation
